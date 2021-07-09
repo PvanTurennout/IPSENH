@@ -1,0 +1,16 @@
+<form [formGroup]="playlistFormGroup" class="form-wrapper">
+  <mat-form-field appearance="outline">
+    <mat-label>Playlist Name</mat-label>
+    <input matInput formControlName="name">
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    class="submit-button"
+    color="primary"
+    [disabled]="playlistFormGroup.invalid"
+    (click)="submit()"
+  >
+    {{isNew ? 'Create' : 'Save'}}
+  </button>
+</form>

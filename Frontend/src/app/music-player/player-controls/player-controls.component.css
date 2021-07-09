@@ -1,0 +1,30 @@
+.button-container{
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.volume-control{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5%;
+}
+
+.music-button, .music-play-button{
+  border: none;
+  color: var(--appWhite);
+  background-color: var(--dimContrast);
+}
+
+.track-text{
+  font-size: 1rem;
+  color: var(--appBlack);
+  text-align: center;
+}
+
+.track-progression-container{
+  margin: 0 10%;
+}

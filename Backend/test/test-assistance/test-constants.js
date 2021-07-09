@@ -1,0 +1,5 @@
+module.exports = {
+    validTestJWT: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsidXNlcklkIjozLCJ1c2VybmFtZSI6IkxlYW5kZXIiLCJzdGF0ZSI6bnVsbCwibGlzdGVuSGlzdG9yeSI6bnVsbCwic3RhbmRhcmRQbGF5bGlzdElkIjoxfSwiaWF0IjoxNjI1MDU4MDA0fQ.KawkgXwZc0DOsPejTwACEBc24MvRBbKU_aN7DzNCNkA",
+    invalidTestJWT: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkxlYW5kZXIiLCJwYXNzd29yZCI6IlRlc3QxMjMifQ.rxxg3pN7FymzGehFgEsf_enKLDyZ8GnMkgCRa-hI7NI",
+    emptyTestJWT: "Bearer "
+};

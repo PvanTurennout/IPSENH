@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Sources(
+    sourceId INT AUTO_INCREMENT PRIMARY KEY,
+    type INT NOT NULL,
+    location VARCHAR(1000) NOT NULL
+);

@@ -1,0 +1,35 @@
+<div class="body">
+  <button class="back-button" mat-icon-button routerLink="/home"><mat-icon>arrow_back</mat-icon></button>
+  <div class="stat-container mat-card">
+    <h1>Most played songs:</h1>
+    <table class="stat-table">
+      <thead>
+        <tr>
+            <th>Song</th>
+            <th>Times played</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let track of tracks">
+          <td><span>{{track.trackName}}</span></td>
+          <td><span>{{track.amount_played}}</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <h1>Favorite genres:</h1>
+    <table class="stat-table">
+      <thead>
+        <tr>
+          <th>Genre</th>
+          <th>Times played</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let genre of genres">
+        <td><span>{{genre.genre}}</span></td>
+        <td><span>{{genre.amount_played}}</span></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

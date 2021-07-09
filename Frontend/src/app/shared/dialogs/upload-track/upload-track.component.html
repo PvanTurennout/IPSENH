@@ -1,0 +1,57 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+<div class="createTrackWrapper">
+  <mat-button-toggle-group
+    class="toggle-group"
+    name="inputType"
+    aria-label="Font Style"
+    [formControl]="inputTypeControl"
+  >
+    <mat-button-toggle class="w-50" value="file">File upload</mat-button-toggle>
+    <mat-button-toggle class="w-50" value="youtube">YouTube</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <form class="form-wrapper w-100" [formGroup]="trackFormGroup">
+    <mat-form-field appearance="outline" *ngIf="inputTypeControl.value == 'file'">
+      <mat-label>File input</mat-label>
+      <ngx-mat-file-input accept="audio/*" formControlName="outline" placeholder="File input" (change)="selectFile($event)"></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" *ngIf="inputTypeControl.value == 'youtube'">
+      <mat-label>YouTube URL</mat-label>
+      <input matInput type="url" maxlength="200" formControlName="YoutubeURL" (change)="verifyUrl()"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Artist</mat-label>
+      <input matInput type="text" maxlength="100" formControlName="artist"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Album</mat-label>
+      <input matInput type="text" maxlength="500" formControlName="album"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" maxlength="4" formControlName="year"/>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Genre</mat-label>
+      <input matInput type="text" maxlength="50" formControlName="genre"/>
+    </mat-form-field>
+  </form>
+</div>
+
+<button mat-raised-button color="warn" mat-dialog-close class="close-button">Close</button>
+
+<button
+  mat-raised-button
+  class="upload-button btn btn-success btn-sm"
+  [disabled]="!enableButton"
+  (click)="upload()"
+>
+  Upload
+</button>

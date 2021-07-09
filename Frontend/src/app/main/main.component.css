@@ -1,0 +1,135 @@
+.container-fluid{
+  padding: 0;
+}
+
+.app-row{
+  margin: 0;
+}
+
+.ham-button {
+  float: left;
+  position: absolute;
+  margin: 12px 0;
+}
+
+h1 {
+  display: inline-block;
+  text-align: center;
+  color: var(--bright);
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 0;
+  line-height: 64px;
+  width: 120px;
+  margin: 0 0 0 calc(50% - 60px);
+}
+
+app-usermenu {
+  position: absolute;
+  float: right;
+  right: 0;
+  top: 24px;
+  padding: 0;
+  max-width: 70%;
+}
+
+p {
+  text-align: center;
+  padding: 6px;
+  background-color: var(--component-bg-color);
+}
+
+.playlist-overview {
+  height: 90vh;
+}
+
+.full-width {
+  margin: 0;
+  padding: 0;
+}
+
+.playlist-user {
+  height: 5vh;
+}
+
+.current-playlist-overview {
+  height: 70vh;
+}
+
+.player {
+  height: 100%;
+}
+
+.header {
+  max-width: 100%;
+  height: 100px;
+  background: var(--mainDark);
+  margin: 0;
+  padding: 18px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.track-list-container {
+  height: calc(100vh - 301px);
+}
+
+.footer {
+  height: 105px;
+  padding-top: 5px;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+}
+
+.app-title {
+  padding: 0 3px;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 300px;
+  max-width: calc(100vw - 32px);
+  border-right: none;
+  background: var(--mainLight);
+  color: var(--appWhite);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.content {
+  height: calc(100% - 32px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: var(--appGrey);
+}
+
+mat-sidenav-container, mat-sidenav-content {
+  height: calc(100vh - 100px);
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    line-height: 10px;
+  }
+
+  .content {
+    margin-left: 16px;
+  }
+
+  app-usermenu {
+    top: 40px;
+  }
+}

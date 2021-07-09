@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="header">
+    <button class="ham-button" mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">
+        menu
+      </mat-icon>
+      <mat-icon *ngIf="sidenav.opened">
+        close
+      </mat-icon>
+    </button>
+    <h1>
+      {{ pageTitle }}
+    </h1>
+    <app-usermenu></app-usermenu>
+  </div>
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+      <app-playlist-overview></app-playlist-overview>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+        <div class="app-row main-content">
+          <div class="full-width">
+
+            <app-active-playlist-name></app-active-playlist-name>
+
+            <div class="row gx-0 gy-0">
+              <div class="col-lg-12 gx-0 track-list-container">
+                  <app-active-playlist></app-active-playlist>
+              </div>
+            </div>
+
+            <div class="row gx-0 footer">
+              <music-player-controls></music-player-controls>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+<music-player-youtube-host></music-player-youtube-host>

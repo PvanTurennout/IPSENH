@@ -1,0 +1,32 @@
+<div class="player-wrapper">
+  <p class="track-text">{{trackText}}</p>
+  <div class="music-controls-container">
+    <div class="button-container">
+      <button mat-icon-button (click)="onPreviousButton()" class="music-button">
+        <mat-icon>skip_previous</mat-icon>
+      </button>
+
+      <button mat-icon-button (click)="onPlayPauseButton()" class="music-play-button">
+        <mat-icon>{{isPlaying ? 'pause' : 'play_arrow'}}</mat-icon>
+      </button>
+
+      <button mat-icon-button (click)="onNextButton()" class="music-button">
+        <mat-icon>skip_next</mat-icon>
+      </button>
+
+      <div class="volume-control">
+        <button mat-icon-button (click)="onMute()" class="music-button">
+          <mat-icon>{{muted ? 'volume_off' : 'volume_up'}}</mat-icon>
+        </button>
+
+        <!--        <input type="range" step="1" min="0" max="100" (click)="onVolumeChange()" [formControl]="volumeSlider">-->
+        <mat-slider [formControl]="volumeSlider" (input)="onVolumeChange()" min="0" max="100" step="1"></mat-slider>
+      </div>
+    </div>
+    <div class="track-progression-container">
+      <mat-progress-bar mode="determinate" [value]="trackProgress"></mat-progress-bar>
+      <!--        <progress style="width: 100%;" max="100" [value]="trackProgress"></progress>-->
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="playlist-wrapper">
+  <h2>- Playlists -</h2>
+  <button mat-button (click)="loadUserStandardPlaylist()"><mat-icon style="margin-right: 10px">favorite</mat-icon>Favourites</button>
+
+  <mat-divider></mat-divider>
+
+  <app-playlist-list class="playlist-list" [playlists]="playlists"></app-playlist-list>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" class="contained-button" (click)="createPlaylist()">Create Playlist</button>
+    <button mat-raised-button color="primary" class="contained-button" (click)="createTrack()">Add track</button>
+  </div>
+
+</div>

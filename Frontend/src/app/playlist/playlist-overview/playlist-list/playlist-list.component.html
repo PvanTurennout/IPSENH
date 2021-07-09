@@ -1,0 +1,18 @@
+<ul class="playlist-list">
+  <li *ngFor="let playlist of playlists" class="an-playlist">
+    <button mat-button (click)="loadPlaylist(playlist)" class="playlist-button">{{playlist.name}}</button>
+    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="editPlaylist(playlist)">
+        <mat-icon class="blue-text">edit</mat-icon>
+        <span class="blue-text">Edit</span>
+      </button>
+      <!--   add to track to playlist   -->
+<!--      <button mat-menu-item (click)="deletePlaylist(playlist)">-->
+<!--        <mat-icon class="red-text">delete</mat-icon>-->
+<!--        <span class="red-text">Remove</span>-->
+<!--      </button>-->
+    </mat-menu>
+  </li>
+</ul>

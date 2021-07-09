@@ -1,0 +1,19 @@
+.playlist-list{
+  width: 100%;
+  height: calc(100% - 174px);
+  overflow-y: scroll;
+  padding: 0 !important;
+  margin: 0 0 10px;
+}
+
+.an-playlist{
+  display: flex;
+  flex-direction: row;
+}
+
+.playlist-button{
+  width: 100%;
+  text-align: left;
+  color: var(--brightContrast);
+  height: 43px;
+}

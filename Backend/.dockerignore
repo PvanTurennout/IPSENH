@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+test
+integration-tests
+jest.config.js
+README.md
+sonar-project.properties
