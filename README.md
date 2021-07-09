@@ -1,9 +1,13 @@
 # IPSENH project
 ## Description
+We created a music player that could play music form multiple sources. Supported: uploaded audio files and Youtube.
+
+### Outline
 CI/CD: Gitlab CI and Sonarqube. \
-Frontend: Angular with Angular Material. \
+Frontend: Angular 11 with Angular Material. \
 Backend: Nodejs with Express and Jest. \
-We used a Mysql database, version 8.0.25. We also made use of Firebase cloud storage.
+We used a Mysql database, version 8.0.25. We used migrations to create the database. The package we used is [marv](https://www.npmjs.com/package/marv), with the mysql driver. \
+We also made use of Firebase cloud storage for storing audio files.
 
 ## Docker repositories
 * [frontend](https://hub.docker.com/repository/docker/musicisum4ipsenh/frontend)
@@ -22,7 +26,7 @@ Main screen:
 ### Frontend
 | Variables            |  Used For                     |
 | :------------------: | :---------------------------: |
-| production           | Is production? Boolean        |
+| production           | Is production?                |
 | backendUrl           | address where backend is hosted. Expected to be able to append endpoint to this string (example value: http://localhost:3000/api/) |
 | firebase             | object with variables to connect to firebase |
 
